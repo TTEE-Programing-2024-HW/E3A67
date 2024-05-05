@@ -1,8 +1,8 @@
 #include<stdio.h>//前置處理器的一種,將stdio檔案包含進去 
 #include<stdlib.h>//前置處理器的一種,將stdlib檔案包含進去
 #include<conio.h>
-char menu;
-void mult (int n);
+char menu;//宣告主選單的變數 
+void mult (int n);//宣告乘法表的函數 
 int main(void)//主函數
 {
 	printf("---------------------------------------------\n");
@@ -66,14 +66,13 @@ int main(void)//主函數
 		    printf("--------------------------\n");//顯示主選單
 		    printf("請根據選單上的字元以執行程式:");//要求使用者輸入一個選單上的字元 
 		    scanf("%c",&menu);
-		    switch(menu)
+		    switch(menu)//選擇要做哪一個 
 		    {
 		      case'a':
 		      case'A':
 		      {
-			     system("cls");
-		         char cha;
-			     printf("輸入一個‘a’到‘n’的字元\n");
+			     system("cls"); 
+			     printf("輸入一個'a'到'n'的字元\n");//要求使用者輸入一個‘a’到‘n'的字元 
 			     scanf("%c",&ch);
 			     if(ch>='a'||ch<='n')
 			      {
@@ -81,7 +80,7 @@ int main(void)//主函數
 			      }
 			     else
 			      {
-				     printf("輸入錯誤，請重新輸入");
+				     printf("輸入錯誤，請重新輸入");//顯示輸入錯誤，請重新輸入
 			      }
 				 system("pause");
 				 break;
@@ -92,15 +91,15 @@ int main(void)//主函數
 				 fflush(stdin);
 				 system("cls");
 				 int n;
-				 printf("請輸入一個1至9的整數\n");
+				 printf("請輸入一個1至9的整數\n");//要求使用者輸入一個1至9的整數
                  scanf("%d",&n);
-				 if(n>=1&&n<=9)
+				 if(n>=1&&n<=9)//如果n為1~9的整數 
 				 {
-				 	mult(n);
+				 	mult(n);//執行乘法表 
 				 }
 				 else
 				 {
-				 	printf("輸入錯誤，請重新輸入\n");
+				 	printf("輸入錯誤，請重新輸入\n");//顯示輸入錯誤，請重新輸入
 				 }
 				 system("pause");
 				 break;
@@ -109,8 +108,8 @@ int main(void)//主函數
 			  case'C':
 			  {
 				aa:
-				printf("continue?(y/n)");
-			  	char choice=getch();
+				printf("continue?(y/n)");//顯示是否要繼續 
+			  	char choice=getch();//宣告choice=上面那行的字元 
 			  	switch(choice)
 				  {
 				  	case'y':
@@ -126,8 +125,8 @@ int main(void)//主函數
 					   }
 					default: 
 					{
-						printf("輸入錯誤，請重新輸入\n");
-						goto aa;
+						printf("輸入錯誤，請重新輸入\n");//顯示輸入錯誤，請重新輸入
+						goto aa;//回到詢問是否要繼續那行程式 
 					}
 			   }
 				break;
