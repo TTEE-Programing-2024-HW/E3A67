@@ -1,6 +1,7 @@
 #include<stdio.h>//前置處理器的一種,將stdio檔案包含進去
 #include<stdlib.h>//前置處理器的一種,將stdlib檔案包含進去
 #include<conio.h>//前置處理器的一種,將conio檔案包含進去
+char menu;//宣告主選單的變數
 int main(void)//主函數 
 {
 	printf("---------------------------------------------\n");
@@ -53,6 +54,20 @@ int main(void)//主函數
 	} 
 	if(x==2024)//若x等於2024 
 	{
-	  printf("welcome\n");//顯示welcome	
+	  printf("welcome\n");//顯示welcome
+	  system("pause");	
+	  while(1)
+	  {
+	    fflush(stdin);//使input buffer淨空  
+		system("cls");//清除螢幕
+		printf("------[booking system------\n");
+		printf("|a. Available seats       |\n");
+		printf("|b. Arrange for you       |\n");   
+		printf("|c. Choose by yourself    |\n");
+		printf("|d. Exit                  |\n");
+		printf("---------------------------\n");//顯示主選單
+		printf("請根據選單上的字元以執行程式:");//要求使用者輸入一個選單上的字元 
+		scanf("%c",&menu);//讀入menu的值 
+	  }
 	} 
 }
