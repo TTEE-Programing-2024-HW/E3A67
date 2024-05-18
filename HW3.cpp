@@ -67,7 +67,57 @@ int main(void)//主函數
 		printf("|d. Exit                  |\n");
 		printf("---------------------------\n");//顯示主選單
 		printf("請根據選單上的字元以執行程式:");//要求使用者輸入一個選單上的字元 
-		scanf("%c",&menu);//讀入menu的值 
+		scanf("%c",&menu);//讀入menu的值
+		 switch(menu)//選擇要做哪一個 
+		    {
+		    	case'a':
+		    	{
+			  	} 
+			  	case'b':
+			  	{
+					fflush(stdin);//使input buffer淨空  
+					system("cls");//清除螢幕
+					int s;//宣告整數變數 
+					printf("請問需要幾個座位(1~4)\n");//詢問使用者需要幾個座位 
+                	scanf("%d",&s);//讀入s的值 
+					if(s>=1&&s<=3)//如果s為1~3的整數 
+					{
+				 	}
+				 	if(s==4)
+				 	{
+				 	}
+				 	system("pause");//螢幕畫面暫停，並等待使用者按任意鍵
+				 	break;//離開迴圈
+			  	}
+			  	case'c':
+			  	{
+				}
+			  	case'd':
+			  	{
+					aa:
+					printf("continue?(y/n)");//顯示是否要繼續 
+			  		char choice=getch();//宣告choice=上面那行的字元 
+			  		switch(choice)
+				  	{
+				  		case'y':
+					 	{
+							break;//離開迴圈
+					 	}
+						case'n':
+					  	{
+							return 0;
+							break;//離開迴圈
+					   	}
+						default: 
+						{
+							printf("輸入錯誤，請重新輸入\n");//顯示輸入錯誤，請重新輸入
+							goto aa;//回到詢問是否要繼續那行程式 
+						}
+			   	}
+				break;//離開迴圈
+			  }
+	    	}
+		     
 	  }
 	} 
 }
