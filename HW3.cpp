@@ -2,8 +2,20 @@
 #include<stdlib.h>//前置處理器的一種,將stdlib檔案包含進去
 #include<conio.h>//前置處理器的一種,將conio檔案包含進去
 char menu;//宣告主選單的變數
+int x,y=0,w,i,j,seat[9][9]={0,0};//宣告整數變數 
 int main(void)//主函數 
 {
+	int max=9,min=0;
+		for(w=0;w<=9;w++)
+		{
+			i=rand()%(max-min+1)+min;
+			j=rand()%(max-min+1)+min;
+			if(seat[i][j]==1)
+			{
+				w--;
+			}
+			seat[i][j]=1;		
+		}
 	printf("---------------------------------------------\n");
 	printf("---------------------------------------------\n");
 	printf("---------------------------------------------\n");
@@ -31,7 +43,6 @@ int main(void)//主函數
     printf("---------------------------------------------\n");//顯示個人畫面
     system ("pause");//暫停程式執行,等待使用者按下任意鍵繼續 
     system("cls");//清除螢幕
-    int x,y;//宣告整數變數 x,y
     char ch;//宣告字元變數 
     while(y<3)//最多輸入3次 
 	{
@@ -72,6 +83,7 @@ int main(void)//主函數
 		    {
 		    	case'a':
 		    	{
+		    		
 			  	} 
 			  	case'b':
 			  	{
@@ -121,3 +133,4 @@ int main(void)//主函數
 	  }
 	} 
 }
+
