@@ -24,7 +24,7 @@ int main(void)
 	char menu;//宣告選單變數 
 	char o,search[10]; 
 	struct people student[10];
-	int x,y=0,n,i,j;//宣告程式所需的變數 
+	int x,y=0,n,i,j,k,grade[10];//宣告程式所需的變數及陣列 
 	
 	style();
     while(y<3)//最多輸入3次 
@@ -163,7 +163,28 @@ int main(void)
 		        	break;
 		        
 		        case 'd':
-		        	
+		        	for(i=0;i<n;i++)
+					{
+						for(j=i+1;j<n;j++)
+						{
+							if(student[i].average<student[j].average)
+							{
+								k==grade[i];
+								grade[i]=grade[j];
+								grade[j]==k;
+							}
+						}
+					}
+					
+			        for(i=0;i<n;i++)
+			        {
+				     printf("NAME      STUDENT NUMBER        MATH      PHYSICS      ENGLISH      AVERAGE\n");
+					 printf("%8s %8d %10d %10d %10d %13.2f\n",student[grade[i]].name,student[grade[i]].student_number,student[grade[i]].math,student[grade[i]].physics,student[grade[i]].english,student[grade[i]].average);
+			        }
+			        
+			        system("pause");
+			        fflush(stdin);
+			        system("CLS");
 		        	break;
 		        	 
 		        case 'e':
