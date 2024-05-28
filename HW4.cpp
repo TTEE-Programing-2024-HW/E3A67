@@ -24,7 +24,7 @@ int main(void)
 	char menu;//宣告選單變數 
 	char o,search[10]; 
 	struct people student[10];
-	int x,y=0,n,i;//宣告密碼和輸入次數的變數 
+	int x,y=0,n,i,j;//宣告程式所需的變數 
 	
 	style();
     while(y<3)//最多輸入3次 
@@ -147,20 +147,23 @@ int main(void)
 		        	scanf("%s",&search);
 		        	for(i=0;i<=n;i++)
 					{
-						if(i==n&&i!=1)
-						{
-							printf("nothing about this student");
-							break;
-						}
 						if(search==student[i].name)
 						{
 							printf("NAME:%8S  STUDENT NUMBER:%8d  MATH:%10d  PHYSICS:%10d  ENGLISH:%10d  AVERAGE:%10.2f\n",student[i].name,student[i].student_number,student[i].math,student[i].physics,student[i].english,student[i].average);
+							j==1;
+						}
+						
+						if(i==n&&j!=1)
+						{
+							printf("nothing about this student");
+							break;
 						}
 					}
 		        	system("pause");
 		        	break;
 		        
 		        case 'd':
+		        	
 		        	break;
 		        	 
 		        case 'e':
